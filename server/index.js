@@ -130,5 +130,7 @@ initDB().then(() => {
   app.listen(PORT, () => console.log(`🚀 Influscout API running on http://localhost:${PORT}`));
 }).catch(err => {
   console.error("❌ DB init failed:", err.message);
+  console.error("Full error:", err);
   process.exit(1);
 });
+// This line already exists - just checking
