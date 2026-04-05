@@ -27,7 +27,7 @@ export default function App() {
     setLoading(true);
     const finalNiche = form.niche === "Other" ? otherNiche : form.niche;
     try {
-      const res = await fetch("/api/waitlist", {
+      const res = await fetch("https://influscout.onrender.com/api/waitlist", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...form, niche: finalNiche }),
